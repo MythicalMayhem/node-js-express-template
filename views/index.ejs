@@ -1,0 +1,35 @@
+<html lang="en">
+<%- include("./partials/nav.ejs") %>
+  <%- include("./partials/head.ejs") %>
+
+    <body class="body">
+      <h2>All Memories</h2>
+      <div class="posts content">
+        <% if (posts.length> 0) { %>
+          <% posts.forEach(post=> { %>
+            <a class="single" href="/posts/<%= post._id %>">
+              <h3 class="title">
+                <%= post.title %>
+              </h3>
+              <p class="author">
+                <%= post.author %>
+              </p>
+              <p class="snippet">
+                <%= post.body %>
+              </p>
+              <p class="snippet">
+                <%= moment(post.createdAt).calendar() %>
+              </p>
+              <p class="snippet">
+                <%= post.image %>
+              </p>
+            </a>
+            <% }) %>
+              <% } else { %>
+                <p>There are no posts to display...</p>
+                <% } %>
+      </div>
+      <%- include("./partials/footer.ejs") %>
+    </body>
+
+</html>

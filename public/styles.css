@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+body  {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size:1.5rem;
+    background-color: #DDF0FF;
+    color: #223127;
+}
+.snippet123 {
+    margin: 1cm;
+}
+.delete {   
+    display: block;
+    width: 6%;
+    margin-top: 2cm;
+    padding: 5px 20px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+body a:link, body a:visited {
+    text-decoration: none;
+    color: inherit  ;
+    cursor: pointer;
+} 
+
+nav {
+    margin: 2px;
+    border-radius: 0.15cm;
+    z-index: 2;
+    position: sticky;
+    top: 0px;
+    background-color:#DBBBF5;
+    padding: 0.6cm 3cm;
+    border: 5px solid #DBBBF5;
+}
+
+nav a {
+    text-decoration: none;
+   
+}
+nav a:link, nav a:visited {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    margin: 0.5cm 1cm ;
+    top: 0.2cm;
+    word-wrap: none;
+}
+
+.posts{
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.posts a{
+    display: block;
+    height: 100%;
+    width: 8cm;
+    margin: 0.7cm;
+    padding-left: 30px;
+    border: 2px solid #a0103b;
+    background-color: #cf778e;
+  }
+footer {
+    background-color: #8a0a30;
+    color: white;
+    min-height: 200px;
+    margin-top: 3cm ;
+    padding: 1cm;
+    border-radius: 0.2cm;
+}
+h2 {
+    margin-top: 2cm;
+    margin-left: 3.5cm;
+}
+.site-title {
+    text-align: center;
+    padding: 2.06cm;
+    font-size:3rem;
+
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0px 25%;
+}
+
+label {
+    font-size: 2.1rem;
+}
+textarea {
+    resize: none;
+    height: 300px;
+    width: 50%;
+}
+input[type=text], textarea {
+    height: 1.7cm;
+    width: 90%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 4px solid #8a0a30;
+  }
+  input[type=text]:focus, textarea:focus {
+      outline: none;
+  }
+  .create-post form:not(label){
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      margin: 3.5cm;
+    }
+
+    form label {
+        margin: 0.3cm;
+        margin-left: 1cm;
+    }
+
+.submit {
+    width: 250px;
+    height: 70px;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: #cf778e; 
+        font-size: 1.2rem;
+        margin-top: 1.5cm;
+        margin-left: 23cm;
+      
+}
+.submit:hover {
+    background-color: #8a0a30;
+    color: white;
+}
+
+.title1 {
+    font-size: 4.35rem;
+}
+
+.single {
+    margin-left: 2cm;
+}
+.details{
+    margin-left: 7cm;
+}
+
+@media screen and (max-width:325px){
+    nav {
+        border: 5px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items:center ;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,40 @@
+<html lang="en">
+<%- include("./partials/nav.ejs") %>
+    <%- include("./partials/head.ejs") %>
+
+    <body>
+            <div class="details content">
+            <p class="title1">
+                <%= post.title %>
+            </p>
+
+                <div class="single">
+                    <p>
+                       By: <%= post.author %>
+                    </p>
+                    <p>
+                        <%= post.body %>
+                    </p>
+                    <p class="snippet123">
+                        At:<%= moment(post.createdAt).calendar() %>
+                      </p>
+                </div>
+                <a class="delete" data-doc="<%= post._id %>">delete</a>
+            </div>
+
+            <%- include("./partials/footer.ejs") %>
+
+                <script>
+                    const trashcan = document.querySelector('a.delete');
+                    trashcan.addEventListener('click', (e) => {
+                        const endpoint = `/posts/${trashcan.dataset.doc}`;
+                        fetch(endpoint, {
+                            method: 'DELETE',
+                        })
+                            .then(response => response.json())
+                            .then(data => window.location.href = data.redirect)
+                            .catch(err => console.log(err));
+                    });
+
+                </script>
+        </body>

@@ -1,0 +1,24 @@
+<html lang="en">
+<%- include("./partials/nav.ejs") %>
+  <%- include("./partials/head.ejs") %>
+
+    <body>
+
+      <div class="create-post content">
+        <form action="/posts" method="POST">
+          <label for="title">Post title:</label>
+          <input autocomplete="off" type="text" id="title" name="title" required>
+          <label for="author">Post author:</label>
+          <input autocomplete="off" type="text" id="author" name="author" required>
+          <label for="body">Post body:</label>
+          <textarea autocomplete="off" id="body" name="body" required></textarea>
+      <button class="submit">Submit</button>
+      </form>
+      <form action="/profile" method="post" enctype="multipart/form-data">
+        <input type="file" name="avatar" />
+      </form>
+      </div>
+      <%- include("./partials/footer.ejs") %>
+    </body>
+
+</html>
