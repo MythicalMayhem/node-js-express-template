@@ -7,7 +7,7 @@ const multer  = require('multer')
 const upload = multer({ dest: 'uploads/' })
 
 const app = express();
-const dbURI = `mongodb+srv://Oussemaameur:Oussemaameur5@cluster0.klkfq.mongodb.net/posts?retryWrites=true&w=majority`;
+const dbURI = ``;
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => app.listen(3000))
